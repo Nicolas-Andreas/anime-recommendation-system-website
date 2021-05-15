@@ -21,6 +21,8 @@ def load_data():
 	#Load Anime Genres
 	with open('anime_genres.pickle', 'rb') as handle:
    		anime_genres = pickle.load(handle)
+
+	anime_genres.sort()
 	anime_genres.insert(0, 'All')
 	return model, anime_df, anime_genres, user_set_dict, all_animeIds
 
